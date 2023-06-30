@@ -151,6 +151,26 @@ export default function(hljs) {
     beginScope: { 2: "keyword", }
   };
 
+  const USING_DIRECTIVE = {
+    begin: [
+      /^\s*/, // Is first token on the line,
+      /\/\/>/,
+      /\s*/,
+      'using',
+      /[^\S\n]+/
+    ],
+    beginScope: {
+      2: 'comment',
+      4: 'keyword',
+    },
+    end: /\n/,
+    excludeEnd: true,
+    contains: [
+      hljs.QUOTE_STRING_MODE,
+      hljs.NUMBER_MODE
+    ]
+  };
+
   return {
     name: 'Scala',
     keywords: {
@@ -158,6 +178,7 @@ export default function(hljs) {
       keyword: 'type yield lazy override def with val var sealed abstract private trait object if then forSome for while do throw finally protected extends import final return else break new catch super class case package default try this match continue throws implicit export enum given transparent'
     },
     contains: [
+      USING_DIRECTIVE,
       hljs.C_LINE_COMMENT_MODE,
       hljs.C_BLOCK_COMMENT_MODE,
       STRING,
@@ -169,7 +190,7 @@ export default function(hljs) {
       END,
       ...INLINE_MODES,
       USING_PARAM_CLAUSE,
-      ANNOTATION
+      ANNOTATION,
     ]
   };
 }

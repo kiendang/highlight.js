@@ -1,0 +1,8 @@
+//> using packaging.version "1.0.0"
+//> using scala 2.13
+//> using javaOpt -Xmx2g
+// > using this.is comment
+// //> using comment "out"
+
+//> using
+object X

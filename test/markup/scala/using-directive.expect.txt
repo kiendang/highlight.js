@@ -1,0 +1,8 @@
+<span class="hljs-comment">//&gt;</span> <span class="hljs-keyword">using</span> packaging.version <span class="hljs-string">&quot;1.0.0&quot;</span>
+<span class="hljs-comment">//&gt;</span> <span class="hljs-keyword">using</span> scala <span class="hljs-number">2.13</span>
+<span class="hljs-comment">//&gt;</span> <span class="hljs-keyword">using</span> javaOpt -Xmx2g
+<span class="hljs-comment">// &gt; using this.is comment</span>
+<span class="hljs-comment">// //&gt; using comment &quot;out&quot;</span>
+
+<span class="hljs-comment">//&gt; using</span>
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">X</span></span>
